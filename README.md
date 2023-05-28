@@ -96,3 +96,12 @@ Then type `just` to list the just recipes available.
 The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just commands (recipes) you wish to include in your image. By default, it includes the justfiles from [`ublue-os/bling`](https://github.com/ublue-os/bling), if you wish to disable that, you need to just remove the line that includes bling.just.
 
 See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.
+
+Check the [just website](https://just.systems) for tips on modifying and adding your own recipes.
+
+
+These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
+
+    cosign verify --key cosign.pub ghcr.io/celestecaprine/silverbrew
+
+If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
