@@ -72,6 +72,8 @@ rpm:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
     - firefox-langpacks
+    # Remove Gnome Terminal in favor of Tilix.
+    - gnome-terminal
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
