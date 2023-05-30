@@ -12,7 +12,8 @@
 ARG IMAGE_MAJOR_VERSION=38
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
-FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
+FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
+ARG FEDORA_MAJOR_VERSION=38
 
 # The default recipe is set to the recipe's default filename
 # so that `podman build` should just work for most people.
@@ -43,5 +44,9 @@ COPY modules /tmp/modules/
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Run the build script, then clean up temp files and finalize container build.
-RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
-    rm -rf /tmp/* /var/* && ostree container commit
+RUN rpm-ostree install /tmp/ublue-os-wallpapers-0.1-1.fc38.noarch.rpm && \
+        chmod +x /tmp/scripts/build.sh && \
+        /tmp/scripts/build.sh && \
+        /tmp/scripts/akmods.sh && \
+        rm -rf /tmp/* /var/* && \
+        ostree container commit
