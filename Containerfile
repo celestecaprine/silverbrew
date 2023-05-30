@@ -10,6 +10,7 @@ ARG FEDORA_MAJOR_VERSION=38
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
 FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
+ARG FEDORA_MAJOR_VERSION=38
 
 # The default recipe set to the recipe's default filename
 # so that `podman build` should just work for many people.
@@ -24,6 +25,10 @@ ARG RECIPE=./recipe.yml
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
 
+# add akmods RPMs for installation
+COPY --from=ghcr.io/bsherman/base-kmods:${FEDORA_MAJOR_VERSION} /akmods            /tmp/akmods
+COPY --from=ghcr.io/bsherman/base-kmods:${FEDORA_MAJOR_VERSION} /akmods-custom-key /tmp/akmods-custom-key
+
 # Copy the recipe that we're building.
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
 
@@ -36,6 +41,8 @@ COPY scripts /tmp/scripts
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/scripts/build.sh && \
+    chmod +x /tmp/scripts/akmods.sh && \
         /tmp/scripts/build.sh && \
+        /tmp/scripts/akmods.sh && \
         rm -rf /tmp/* /var/* && \
         ostree container commit
