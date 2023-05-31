@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/celestecaprine/silverbrew/compare/v2.1.2...v2.1.3) (2023-05-31)
+
+
+### Bug Fixes
+
+* change boot menu to match available images ([1fc919b](https://github.com/celestecaprine/silverbrew/commit/1fc919bf1e9156d442f3f0546c0e0c67ad795d12))
+
 ## [2.1.2](https://github.com/celestecaprine/silverbrew/compare/v2.1.1...v2.1.2) (2023-05-31)
 
 
