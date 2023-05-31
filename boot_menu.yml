@@ -1,5 +1,6 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: celestecaprine/silverbrew
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: silverbrew
+        info: standard
