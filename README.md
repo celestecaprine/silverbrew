@@ -1,13 +1,8 @@
-# Starting point
+# Fedora Silverbrew
 
-> **Warning**
-> Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
-> There are breaking changes between this and the previous version.
-> If you are merging changes from the previous (v0) version, please refer to [the heads-up blog post](https://universal-blue.org/blog/2023/09/02/startingpoint-rewrite-heads-up-what-you-need-to-know/).
+[![build-silverbrew](https://github.com/celestecaprine/silverbrew/actions/workflows/build.yml/badge.svg)](https://github.com/celestecaprine/silverbrew/actions/workflows/build.yml)
 
-[![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
-
-This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
+This is a custom build forking off of u-blue's starting-point image. If you want to learn how to make your own, check out [their guide](https://ublue.it/making-your-own/) for more information.
 
 For more info, check out the [uBlue homepage](https://universal-blue.org/) and the [main uBlue repo](https://github.com/ublue-os/main/)
 
@@ -60,11 +55,14 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
   systemctl reboot
   ```
+```
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/celestecaprine/silverbrew:latest
+```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/startingpoint:20230403
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/celestecaprine/silverbrew:20230530
 ```
 
 This repository by default also supports signing.
@@ -99,9 +97,8 @@ See [the just-page in the Universal Blue documentation](https://universal-blue.o
 
 Check the [just website](https://just.systems) for tips on modifying and adding your own recipes.
 
+## Verification
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
     cosign verify --key cosign.pub ghcr.io/celestecaprine/silverbrew
-
-If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
