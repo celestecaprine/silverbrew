@@ -39,6 +39,7 @@ jobs:
           image-name: silverbrew
           installer-repo: releases
           installer-major-version: 38
+          boot-menu-path: boot_menu.yml
       - name: install github CLI
         run: |
           sudo dnf install 'dnf-command(config-manager)' -y
