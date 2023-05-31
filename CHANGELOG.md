@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/celestecaprine/silverbrew/compare/v2.0.0...v2.1.0) (2023-05-31)
+
+
+### Features
+
+* add boot_menu.yml ([659f8a9](https://github.com/celestecaprine/silverbrew/commit/659f8a9c18a66b5718533972d18a8e0bc00aff33))
+
 ## [2.0.0](https://github.com/celestecaprine/silverbrew/compare/v1.0.0...v2.0.0) (2023-05-31)
 
 
