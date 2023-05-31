@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/celestecaprine/silverbrew/compare/v2.1.0...v2.1.1) (2023-05-31)
+
+
+### Bug Fixes
+
+* use default boot_menu.yml for testing purposes ([4aff1b2](https://github.com/celestecaprine/silverbrew/commit/4aff1b211c14f1d1dd0daba096735ffdb5e040aa))
+
 ## [2.1.0](https://github.com/celestecaprine/silverbrew/compare/v2.0.0...v2.1.0) (2023-05-31)
 
 
