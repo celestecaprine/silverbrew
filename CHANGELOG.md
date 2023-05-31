@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/celestecaprine/silverbrew/compare/v1.0.0...v2.0.0) (2023-05-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove kmod-wl from kmods to install
+
+### Bug Fixes
+
+* remove kmod-wl from kmods to install ([28ed0ee](https://github.com/celestecaprine/silverbrew/commit/28ed0eef6eb3f0b7aac8b179f48ed164c77cab41))
+
 ## 1.0.0 (2023-05-30)
 
 
