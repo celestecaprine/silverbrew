@@ -1,6 +1,6 @@
 ublue_variants:
-  - label: celestecaprine/silverbrew
+  - label: celestecaprine/zonaite
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: silverbrew
+      - label: zonaite
         info: Default
