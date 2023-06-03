@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: silverbrew-server
+name: zonaite-core
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/ucore-hci
 fedora-version: stable
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: Shebang's custom uCore image.
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -48,14 +48,12 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-%FEDORA_VERSION%/varlad-helix-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
   # performed via rpm-ostree during the image build, and will be pre-installed
   # at the "system level" in the final image.
   install:
-    - helix
     - neofetch
     - zsh
 

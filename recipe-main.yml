@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: silverbrew
+name: zonaite-main
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://universal-blue.org/tinker/make-your-own/
+description: Shebang's custom uBlue image.
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -64,8 +64,8 @@ rpm:
     - libadwaita
     # Add your own below:
     # Example:
+    - exa
     - tilix
-    - neofetch
     - zsh
     - gh
     - helix
@@ -98,5 +98,3 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
