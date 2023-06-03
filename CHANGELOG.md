@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.4.0](https://github.com/celestecaprine/zonaite/compare/v2.3.0...v2.4.0) (2023-06-03)
+
+
+### Features
+
+* added Helix ([143d711](https://github.com/celestecaprine/zonaite/commit/143d711b8e909da7c98db2684f0f598d2776293c))
+* added silverbrew-server ([92d604e](https://github.com/celestecaprine/zonaite/commit/92d604e2bbaea0e41a61502ce0773afec2741e2f))
+* rename project to zonaite ([eb02f0a](https://github.com/celestecaprine/zonaite/commit/eb02f0ac364be304f1f309ff2d80d63995aef29d))
+
+
+### Bug Fixes
+
+* change version to a working version for recipe-serv ([a5b6e3b](https://github.com/celestecaprine/zonaite/commit/a5b6e3b5eecaa4f54506c3fe3e7f607dc84b54ef))
+
 ## 2.3.0 (2023-06-01)
 
 
