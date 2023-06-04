@@ -15,9 +15,10 @@ ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
 ARG FEDORA_MAJOR_VERSION=38
 
-# The default recipe is set to the recipe's default filename
-# so that `podman build` should just work for most people.
-ARG RECIPE=recipe.yml 
+# The default recipe set to the recipe's default filename
+# so that `podman build` should just work for many people.
+ARG RECIPE=./recipe-main.yml
+
 # The default image registry to write to policy.json and cosign.yaml
 ARG IMAGE_REGISTRY=ghcr.io/ublue-os
 
