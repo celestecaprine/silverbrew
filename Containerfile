@@ -14,7 +14,7 @@ ARG FEDORA_MAJOR_VERSION=38
 
 # The default recipe set to the recipe's default filename
 # so that `podman build` should just work for many people.
-ARG RECIPE=./recipe.yml
+ARG RECIPE=./recipe-main.yml
 
 # Copy static configurations and component files.
 # Warning: If you want to place anything in "/etc" of the final image, you MUST
