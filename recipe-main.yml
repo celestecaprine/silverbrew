@@ -64,18 +64,19 @@ rpm:
     - libadwaita
     # Add your own below:
     # Example:
-    - exa
-    - tilix
-    - tilix-nautilus
-    - zsh
-    - gh
-    - helix
-    - virt-manager
-    - libvirt
+    - btop
     - butane
-    - wl-clipboard
+    - exa
     - file-roller
     - file-roller-nautilus
+    - gh
+    - helix
+    - libvirt
+    - tilix
+    - tilix-nautilus
+    - virt-manager
+    - wl-clipboard
+    - zsh
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
