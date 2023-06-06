@@ -55,6 +55,7 @@ rpm:
   # at the "system level" in the final image.
   install:
     - btop
+    - bridge-utils
     - neofetch
     - zsh
 
