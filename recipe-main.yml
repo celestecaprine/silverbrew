@@ -65,6 +65,7 @@ rpm:
     # Add your own below:
     # Example:
     - btop
+    - bridge-utils
     - butane
     - exa
     - file-roller
