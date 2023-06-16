@@ -49,6 +49,7 @@ rpm:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-%FEDORA_VERSION%/varlad-helix-fedora-%FEDORA_VERSION%.repo
+    - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -73,6 +74,7 @@ rpm:
     - gh
     - helix
     - libvirt
+    - tailscale
     - tilix
     - tilix-nautilus
     - virt-manager
