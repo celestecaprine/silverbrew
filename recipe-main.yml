@@ -78,6 +78,7 @@ rpm:
     - tilix
     - tilix-nautilus
     - vagrant
+    - virt-install
     - virt-manager
     - wl-clipboard
     - zsh
