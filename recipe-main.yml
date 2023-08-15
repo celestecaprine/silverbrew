@@ -68,7 +68,6 @@ rpm:
     - btop
     - bridge-utils
     - butane
-    - exa
     - file-roller
     - file-roller-nautilus
     - gh
@@ -77,8 +76,6 @@ rpm:
     - tailscale
     - tilix
     - tilix-nautilus
-    - vagrant
-    - virt-install
     - virt-manager
     - wl-clipboard
     - zsh
