@@ -1,0 +1,51 @@
+# This file can only be edited inside the uBlue image's git repository.
+
+# The image will be at "ghcr.io/yourusername/name".
+name: zonaite-main
+
+# The native container image to build on top of.
+# Warning: Non-uBlue images might not work properly, due to missing components.
+base-image: ghcr.io/ublue-os/silverblue-main
+
+# What Fedora version to use. Use an explicit version or `latest`.
+# If you use `latest`, you will be automatically updated to the next major
+# Fedora version, assuming the image you're using as your base container
+# builds with the tag (all uBlue images do this).
+image-version: 38
+
+# This description will be visible in the container metadata.
+description: Shebang's custom uBlue image.
+
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-38/varlad-helix-fedora-38.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - btop
+      - bridge-utils
+      - butane
+      - file-roller
+      - file-roller-nautilus
+      - gh
+      - helix
+      - libvirt
+      - tailscale
+      - tilix
+      - tilix-nautilus
+      - virt-manager
+      - wl-clipboard
+      - zsh
+      - zoxide
+      - kubernetes-client
+    remove:
+      # Remove the native firefox (from Fedora) in favor of the Flatpak.
+      - firefox
+      - firefox-langpacks
+      # Remove Gnome Terminal in favor of Tilix.
+      - gnome-terminal
+      - gnome-terminal-nautilus
+  - type: script
+    scripts:
+      - signing.sh
+      - carapace.sh
