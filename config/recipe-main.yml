@@ -11,7 +11,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this).
-image-version: 38
+image-version: 39
 
 # This description will be visible in the container metadata.
 description: Shebang's custom uBlue image.
@@ -19,7 +19,7 @@ description: Shebang's custom uBlue image.
 modules:
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-38/varlad-helix-fedora-38.repo
+      - https://copr.fedorainfracloud.org/coprs/varlad/helix/repo/fedora-39/varlad-helix-fedora-39.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - btop
